@@ -41,7 +41,8 @@ class Axiom < Formula
   def caveats
     <<~EOS
       Optional components and their dependencies:
-        axiom hub            needs Python 3.10+  (pip install axiom-hub)
+        axiom hub            needs Python 3.10+:
+                             pip install https://github.com/whyparv/homebrew-axiom/releases/latest/download/axiom_hub-0.4.1-py3-none-any.whl
         axiom phone android  needs adb           (brew install android-platform-tools)
         axiom build / phone  need macOS + Xcode
       axiom (ios, android) works on its own with no extra dependencies.
