@@ -5,23 +5,29 @@
 class Axiom < Formula
   desc "One CLI for shipping apps and driving software from agents"
   homepage "https://axiom.synquic.cloud"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/whyparv/homebrew-axiom/releases/download/v0.1.2/axiom-darwin-arm64.tar.gz"
-      sha256 "f7960de806d5f04b376d12c18bdfb345e6d1299108e71fa2a5d07f775a6f8b78"
+      url "https://github.com/whyparv/homebrew-axiom/releases/download/v0.1.3/axiom-darwin-arm64.tar.gz"
+      sha256 "44ae978f7675ee01d5e3974d329bd87872de2626131449ca2fc6ab96811fee63"
     end
     on_intel do
-      url "https://github.com/whyparv/homebrew-axiom/releases/download/v0.1.2/axiom-darwin-amd64.tar.gz"
-      sha256 "d41da51748c5e2522ec5f14a633fbecc53da667a8d91ef97ba4b4c015feeb086"
+      url "https://github.com/whyparv/homebrew-axiom/releases/download/v0.1.3/axiom-darwin-amd64.tar.gz"
+      sha256 "5a5ec4c556938958b035d3b539a28aeb051a2518eec87cd28fb6783317e01d7d"
     end
   end
 
   on_linux do
-    url "https://github.com/whyparv/homebrew-axiom/releases/download/v0.1.2/axiom-linux-amd64.tar.gz"
-    sha256 "2a489445eec6ee41f9761d9011dc376325c1d73c3cc3a22d158f20aef65ab812"
+    on_arm do
+      url "https://github.com/whyparv/homebrew-axiom/releases/download/v0.1.3/axiom-linux-arm64.tar.gz"
+      sha256 "7025f7ccd12c81908eef87e3d54c9eda31ddd5e131111715de86f70e44756e3d"
+    end
+    on_intel do
+      url "https://github.com/whyparv/homebrew-axiom/releases/download/v0.1.3/axiom-linux-amd64.tar.gz"
+      sha256 "b9e7f83aae04bd8cbf3b8e2b986e07ce301eb837b4e7d7d32a840975118fa840"
+    end
   end
 
   # axiom itself is a self-contained binary (no Go or Rust needed at runtime).
@@ -43,6 +49,6 @@ class Axiom < Formula
   end
 
   test do
-    assert_match "0.1.2", shell_output("#{bin}/axiom version")
+    assert_match "0.1.3", shell_output("#{bin}/axiom version")
   end
 end
