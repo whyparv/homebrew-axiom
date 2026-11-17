@@ -44,7 +44,8 @@ class Axiom < Formula
         axiom hub            needs Python 3.10+:
                              pip install https://github.com/whyparv/homebrew-axiom/releases/latest/download/axiom_hub-0.4.1-py3-none-any.whl
         axiom phone android  needs adb           (brew install android-platform-tools)
-        axiom build / phone  need macOS + Xcode
+        axiom build / phone  need an Apple silicon Mac + Xcode; this formula installs only
+                             axiom, the install script at axiom.synquic.cloud sets them up
       axiom (ios, android) works on its own with no extra dependencies.
     EOS
   end
